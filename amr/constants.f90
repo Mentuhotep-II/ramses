@@ -1,6 +1,8 @@
 module constants
   use amr_commons, ONLY: dp
 
+  ! JB adds a silly comment. 
+  
   ! Numerical constants
   real(dp),parameter ::twopi        = 6.2831853d0
   real(dp),parameter ::pi           = twopi/2d0
