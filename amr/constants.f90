@@ -1,6 +1,9 @@
 module constants
   use amr_commons, ONLY: dp
 
+  ! Some commit introduced a new variable : 
+  rea(dp),parameter :: thirteen = 13.0d0
+
   ! Numerical constants
   real(dp),parameter ::twopi        = 6.2831853d0
   real(dp),parameter ::pi           = twopi/2d0
