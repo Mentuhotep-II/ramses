@@ -4,7 +4,7 @@ module constants
   ! JB adds a silly comment. 
   
   ! Some commit introduced a new variable : 
-  rea(dp),parameter :: thirteen = 13.0d0
+  real(dp),parameter :: thirteen = 13.0d0
 
   ! Numerical constants
   real(dp),parameter ::twopi        = 6.2831853d0
