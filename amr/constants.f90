@@ -2,7 +2,7 @@ module constants
   use amr_commons, ONLY: dp
 
   ! JB adds a silly comment. 
-  
+  ! FC adds a comment
   ! Some commit introduced a new variable : 
   real(dp),parameter :: thirteen = 13.0d0
 
