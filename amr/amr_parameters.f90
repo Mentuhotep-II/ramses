@@ -1,6 +1,6 @@
 module amr_parameters
 
-  ! Define real types
+  ! Define real types HEY, this is pl ;))
   integer,parameter::sp=kind(1.0E0)
 #ifndef NPRE
   integer,parameter::dp=kind(1.0E0) ! default
