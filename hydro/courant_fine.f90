@@ -152,7 +152,7 @@ subroutine courant_fine(ilevel)
   mass_tot=mass_tot+mass_all
   ekin_tot=ekin_tot+ekin_all
   eint_tot=eint_tot+eint_all
-  dtnew(ilevel)=MIN(dtnew(ilevel),dt_all)
+  dtnew(ilevel)=MAX(dtnew(ilevel),dt_all)
 
 111 format('   Entering courant_fine for level ',I2)
 
