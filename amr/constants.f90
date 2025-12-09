@@ -1,3 +1,5 @@
+!HELLO MODIF test1
+
 module constants
   use amr_commons, ONLY: dp
 
