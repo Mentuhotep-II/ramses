@@ -58,6 +58,7 @@ module pm_commons
   integer ,allocatable,dimension(:)    ::prevp    ! Previous particle in list
   integer ,allocatable,dimension(:)    ::levelp   ! Current level of particle
   integer(i8b),allocatable,dimension(:)::idp    ! Identity of particle
+  real(dp),allocatable,dimension(:)    ::maxrho ! Maximum density met by a star particle during its travel through numerous cells
   ! Tree related arrays
   integer ,allocatable,dimension(:)    ::headp    ! Head particle in grid
   integer ,allocatable,dimension(:)    ::tailp    ! Tail particle in grid
