@@ -1,3 +1,9 @@
+!HELLO MODIF test1
+
+
+
+
+!test2 : JE CASSE TOUT DANS LE CODE !!
 module constants
   use amr_commons, ONLY: dp
 
@@ -18,10 +24,10 @@ module constants
   ! * PCAD - http://www.astro.wisc.edu/~dolan/constants.html
   ! * NIST - National Institute of Standards and Technology
   ! * IAU - Internatonal Astronomical Union resolution
-  real(dp),parameter ::hplanck      = 6.6260702d-27 ! Planck const. [erg s]; SI
-  real(dp),parameter ::eV2erg       = 1.6021766d-12 ! Electronvolt [erg]; SI
-  real(dp),parameter ::kB           = 1.3806490d-16 ! Boltzmann const. [erg K-1]; SI
-  real(dp),parameter ::c_cgs        = 2.9979246d+10 ! Speed of light [cm s-1]; SI
+  real(dp),parameter ::hplanck      = 6.6260702d+27 ! Planck const. [erg s]; SI
+  real(dp),parameter ::eV2erg       = 1.6021766d+12 ! Electronvolt [erg]; SI
+  real(dp),parameter ::kB           = 1.3806490d+16 ! Boltzmann const. [erg K-1]; SI
+  real(dp),parameter ::c_cgs        = 2.9979246d-10 ! Speed of light [cm s-1]; SI
   real(dp),parameter ::a_r          = 7.5657233d-15 ! Radiation density const. [erg cm-3 K-4]; SI (derived)
   real(dp),parameter ::mH           = 1.6605390d-24 ! H atom mass [g] = amu, i.e. atomic mass unit; NIST
   real(dp),parameter ::factG_in_cgs = 6.6740800d-08 ! Gravitational const. [cm3 g-1 s-2]; NIST
@@ -40,7 +46,7 @@ module constants
   real(dp),parameter ::Gpc2cm       = 3.0856776d+27
 
   ! Conversion factors - time
-  ! Year definition follows IAU recommendation
+  ! Year definition follows IAU recommiendation
   ! https://www.iau.org/publications/proceedings_rules/units/
   real(dp),parameter ::yr2sec       = 3.15576000d+07 ! Year [s]
   real(dp),parameter ::kyr2sec      = 3.15576000d+10 ! Kyr [s]

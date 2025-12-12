@@ -134,6 +134,7 @@ subroutine read_params
   call read_lightcone_params(1,nml_ok)
   call read_tracer_params(1,nml_ok)
   call read_poisson_params(1,nml_ok)
+  !call read_tuto_params(1,nml_ok)
 
   call read_hydro_params(nml_ok)
 #ifdef RT
@@ -656,3 +657,37 @@ subroutine read_poisson_params(namelist_unit,nml_ok)
    endif
 
 end subroutine read_poisson_params
+!###############################################################
+!###############################################################
+!###############################################################
+!subroutine tuto_params(namelist_unit,nml_ok)
+!   use amr_parameters
+!   use amr_commons
+!   integer,intent(in)::namelist_unit
+!   logical,intent(inout)::nml_ok
+!   integer::nml_err
+!   real(dp)::tuto_efficiency
+!   real(dp)::tuto_timescale
+
+!   namelist/tuto_params/tuto_efficiency,tuto_timescale
+
+!   ! Go to the beginning of the file
+!   rewind(namelist_unit)
+
+!   ! Read namelist
+!   read(namelist_unit,NML=tuto_params,IOSTAT=nml_err)
+
+!   if(nml_err>0)then
+!      if(myid==1)write(*,*)'Error reading namelist &POISSON_PARAMS. Check formatting.'
+!      nml_ok=.false.
+!   endif
+
+!  if(tuto_efficiency>0)or(tuto_timescale>0)then
+!        write(*,*)'Error because one or two of the parameters tuto_efficiency or tuto_timescale isn't strictly positive'
+!        nml_ok=.false.
+!   endif
+
+!   if(myid==1)write(*,*)'TUTO: tuto_efficiency=',tuto_efficiency,', tuto_timescale=',tuto_timescale
+
+!end subroutine tuto_params
+

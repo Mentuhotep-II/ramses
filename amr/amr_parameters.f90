@@ -216,6 +216,7 @@ module amr_parameters
   logical ::sf_compressive=.false.      ! Advect compressive and solenoidal turbulence terms separately
   logical ::cooling_ism = .false.      ! Use cooling module from Audit & Hennebelle 2005 (non-RT)
                                         ! instead of ramses classical cooling
+  integer ::tuto_heating_model=1        ! fictional parameter setting an additional heating source for which three models exist in the literature (0 = default,1,2,3)
 
   ! EOS parameters
   character(len=20)::barotropic_eos_form='legacy'  !Type of barotropic EOS: choose from:

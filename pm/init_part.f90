@@ -72,6 +72,7 @@ subroutine init_part
   allocate(xp    (npartmax,ndim))
   allocate(vp    (npartmax,ndim))
   allocate(mp    (npartmax))
+  allocate(maxrho    (npartmax))   !Partie ajoutee avec le projet Particles
   if (MC_tracer) then
      allocate(itmpp (npartmax))
      allocate(partp (npartmax))
@@ -86,7 +87,7 @@ subroutine init_part
 #ifdef OUTPUT_PARTICLE_POTENTIAL
   allocate(ptcl_phi(npartmax))
 #endif
-  xp=0; vp=0; mp=0; levelp=0; idp=0
+  xp=0; vp=0; mp=0; levelp=0; idp=0 ; maxrho=0
   typep(1:npartmax)%family=FAM_UNDEF; typep(1:npartmax)%tag=0
   if(star.or.sink)then
      allocate(tp(npartmax))
@@ -160,6 +161,10 @@ subroutine init_part
      ! Read mass
      read(ilun)xdp
      mp(1:npart2)=xdp
+     deallocate(xdp)
+     ! Read maxrho  (ajoutee avec le projet)
+     read(ilun)xdp
+     maxrho(1:npart2)=xdp
      deallocate(xdp)
      ! Read identity
      allocate(isp8(1:npart2))

@@ -429,6 +429,27 @@ subroutine move1(ind_grid,ind_part,ind_grid_part,ng,np,ilevel)
      end do
   end do
 
+
+
+
+!Projet Particles : We update the value of maxrho
+!  do j=1,np ! We loop over particles
+!     if(typep(j)%family == FAM_STAR))then
+!
+	  !We want to find the adress of the cell where the particle belongs
+	  ! Compute parent cell position	  
+
+
+!	  maxrho(j)=MAX(maxrho(j),uold(indp(???,1))
+
+!	end do
+!     end if
+!  end do    	 
+
+
+
+
+
   ! Compute cloud volumes
 #if NDIM==1
   do j=1,np
