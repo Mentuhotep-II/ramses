@@ -1,6 +1,6 @@
 module constants
   use amr_commons, ONLY: dp
-
+  ! this is a commmmment I guess - Georges
   ! JB adds a silly comment. 
   ! FC adds a comment
   ! Some commit introduced a new variable : 
